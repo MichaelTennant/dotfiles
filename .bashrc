@@ -23,6 +23,8 @@ shopt -s nocaseglob
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
+alias dotfiles-git='git --git-dir=$HOME/.cfg/.git/ --work-tree=$HOME'
+
 # Custom prompt
 export PS1="\[\e[1;36m\][\u@\h: \W]$ \[\e[0m\]"
 
