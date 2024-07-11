@@ -97,20 +97,20 @@ def gen_keyboard_shortcuts(groups):
 
         # Window Manipulation
         Key(
-            [SUPER], 
+            [ALT], 
             "Tab", 
             lazy.next_layout(), 
             desc = "Toggle between window layouts", 
         ), 
 
         Key(
-            [SUPER], 
+            [ALT], 
             "w", 
             lazy.window.kill(), 
             desc = "Kill focused window", 
         ), 
 
-        # Misc
+        # Rofi Menus
         Key(
             [SUPER], 
             "Return", 
@@ -119,12 +119,13 @@ def gen_keyboard_shortcuts(groups):
         ), 
 
         Key(
-            [CONTROL], 
+            [SUPER], 
             "Tab", 
             lazy.spawn("rofi -show window"), 
             desc = "Show window list", 
         ), 
 
+        # Misc
         Key(
             [], 
             "Print", 
