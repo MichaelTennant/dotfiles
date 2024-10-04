@@ -25,9 +25,23 @@ alias grep='grep --color=auto'
 
 alias dotfiles-git='git --git-dir=$HOME/.cfg/.git/ --work-tree=$HOME'
 
-# Custom prompt
+# Custom prompt (print newline before prompt if current line isn't empty)
+function col {
+    local COL
+    local ROW
+    IFS=';' read -sdR -p $'\E[6n' ROW COL
+    echo "${COL}"
+}
+
+function __ps1_newline {
+    if (( $(col) > 1)); then
+        printf '\n'
+    fi
+}
+
+PROMPT_COMMAND='__ps1_newline'
 export PS1="\[\e[1;36m\][\u@\h: \W]$ \[\e[0m\]"
 
 # A critical component of the system
-# R.I.P neofetch my beloved
+# R.I.P. neofetch my beloved
 fastfetch
