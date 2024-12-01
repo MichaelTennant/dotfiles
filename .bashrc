@@ -19,10 +19,10 @@ shopt -s dirspell
 shopt -s globstar
 shopt -s nocaseglob
 
-# Aliases
+# Alias's ...duh
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
-
+alias neofetch='fastfetch'
 alias dotfiles-git='git --git-dir=$HOME/.cfg/.git/ --work-tree=$HOME'
 
 # Custom prompt (print newline before prompt if current line isn't empty)

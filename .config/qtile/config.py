@@ -26,8 +26,16 @@
 # SOFTWARE.
 
 """
-requires
-python iwlib
+----------------------------------------------------------------
+Custom qtile configuration for the X11 window manager
+----------------------------------------------------------------
+This file is the main configuration file which the qtile window
+manager directly interfaces with.
+~/.config/qtile/config.py
+
+Requires:
+ - iwlib
+----------------------------------------------------------------
 """
 
 from libqtile import bar, layout, widget
@@ -86,13 +94,13 @@ floating_layout = layout.Floating(
 screens = [
     gen_primary_screen(
         # Note: Change wallpaper to your desired wallpaper
-        wallpaper = "~/Pictures/porkchop_background.png", 
+        wallpaper = "~/Pictures/snow.jpg", 
         wallpaper_mode = "fill", 
 
         # Note: Change wlan_interface to your internet interface
         #       This can be found by using the command 'ip address'
         #       This can also be removed entirely
-        wlan_interface = "wlo1", 
+        # wlan_interface = "", 
     ), 
 
     # Note: Remove (or add more) for different monitor counts

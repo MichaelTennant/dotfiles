@@ -92,7 +92,21 @@ def gen_primary_screen(wallpaper=None, wallpaper_mode=None, wlan_interface=None)
                     length = 8, 
                 ), 
 
-                widget.GroupBox(), 
+                widget.GroupBox(
+                    highlight_method = "block", 
+                    disable_drag = True, 
+                    toggle = False,  
+                    use_mouse_wheel = False, 
+                    fmt = "{}.", 
+                    rounded = False, 
+                    active = "00FF00", 
+                    inactive = "FF0000", 
+                    this_current_screen_border = "0000FF", 
+                    this_screen_border = "FFFF00", 
+                    other_current_screen_border = "FF00FF", 
+                    other_screen_border = "00FFFF", 
+
+                ), 
 
                 widget.Spacer (
                     length = 8, 
@@ -136,7 +150,20 @@ def gen_secondry_screen(wallpaper=None, wallpaper_mode=None):
                     length = 8, 
                 ), 
 
-                widget.GroupBox(), 
+                widget.GroupBox(
+                    highlight_method = "block", 
+                    disable_drag = True, 
+                    toggle = False,  
+                    use_mouse_wheel = False, 
+                    fmt = "{}.", 
+                    rounded = False, 
+                    active = "00FF00", 
+                    inactive = "FF0000", 
+                    this_current_screen_border = "0000FF", 
+                    this_screen_border = "FFFF00", 
+                    other_current_screen_border = "FF00FF", 
+                    other_screen_border = "00FFFF", 
+                ), 
 
                 widget.Spacer (
                     length = 8, 
