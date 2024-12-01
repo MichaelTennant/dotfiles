@@ -11,7 +11,7 @@ vim.keymap.set("n", "<C-j>", "<C-w><")
 vim.keymap.set("n", "<C-l>", "<C-w>>")
 
 -- Toggle xxd hexdump to allow binary patching
-vim.keymap.set("n", "<C-Tab>", function() toggle_hex_dump() end)
+vim.keymap.set("n", "<leader>hd", function() toggle_hex_dump() end)
 vim.g.hexdump = false
 function toggle_hex_dump()
     if vim.g.hexdump then
